@@ -1,0 +1,155 @@
+<div class="container">
+        <h1>Sign Up</h1>
+        <h4 class="pt-3 pb-2 border-bottom"> Login Information</h4>
+    <div class="row">
+        <div class="col-6">
+            <!-- <div class="row">
+                <div class="col-6"><label for="inputEmail3" class="col-4 col-form-label">Email</label></div>
+                <div class="col-6"><input type="email" class="form-control col-6" id="inputEmail3" placeholder="Email"></div>
+            </div>  -->
+            <!-- test -->
+            <form [formGroup]="signupForm" (ngSubmit)="submitDetail()">
+                <div class="form-group row">
+                    <label for="" class="col-4 ">Email</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="email" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched" class="border border-danger">
+                            please Enter your email
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 ">Password</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="Password" class="form-control col-6">
+                        
+                    </div>
+                    <span *ngIf="!signupForm.get('Password').valid && 
+                    signupForm.get('Password').touched " class="">Please enter Your name!</span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Retype Password:*</label>
+                    <div class="col-8">
+                        <!-- <p class="font-small-1">8 characters or more (case sensitive)</p> -->
+                        <input type="text" formControlName="cpassword" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('cpassword').valid && signupForm.get('cpassword').touched">
+                        Please Enter confirm password
+                    </span>
+                </div>
+                <!-- second row  -->
+                 <h4>Contact Information</h4>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">First Name:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="firstName" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched" class="help-block text-danger">
+                        Please Enter your Name
+                    </span>
+                </div>
+                 <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Last Name:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="lastName" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched" class="help-block text-danger">
+                            Please Enter your last Name
+                        </span>
+                </div> 
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Company Name:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="company" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('company').valid && signupForm.get('company').touched" class="help-block text-danger">
+                            Please Enter your Company Name
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Phone Number:</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="phone" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched" class="help-block text-danger">
+                            Please Enter your Phone Number
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Address Line 1:</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="address1" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('address1').valid && signupForm.get('address1').touched" class="help-block text-danger">
+                            Please Enter your Address Line 1
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Address Line 2:</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="address2" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('address2').valid && signupForm.get('address2').touched" class="help-block text-danger">
+                            Please Enter your Address Line 2
+                        </span>
+                </div>
+
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Suburb/City:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="city" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('city').valid && signupForm.get('city').touched" class="help-block text-danger">
+                            Please Enter your City
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">State/Province:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="state" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('state').valid && signupForm.get('state').touched" class="help-block text-danger">
+                            Please Enter your State
+                        </span>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-4 col-form-label">Zip/Postcode:*</label>
+                    <div class="col-8">
+                        <input type="text" formControlName="zip" class="form-control col-6">
+                    </div>
+                    <span *ngIf="!signupForm.get('zip').valid && signupForm.get('zip').touched" class="help-block text-danger">
+                            Please Enter your Postcode
+                        </span>
+                </div>
+                <button type="submit" class="btn btn-primary text-left" >Sign up</button>
+                <!-- validators checking  -->
+                <br><br><br>
+                <!-- My name lenght <input type="text" class="form-control" maxlength="10" formControlName="checklength">
+        
+                <div *ngIf="checklength.errors?.maxlength">password can be ma 10 </div> -->
+            </form>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>
+<p>{{ showvalue }}</p>
+<!-- <h5>Free Forever</h5>
+<p>
+    You can use up to 500 credits absolutely free,no contract or credit card required.You can check how much 
+    credits are worth with <a>this handy guide.</a>
+</p>
+<h5>Pay Monthly</h5>
+<p>
+    A once-per-month charge on based on how many credits you use during your 30 day period.Your plan will 
+    auto-update as your usage increases <a>View price table.</a>   
+     nexy para -->
+    <!-- Boxset automatically adjust your billing tier as your production grows and shrinks.Since 
+    your last monthly bill,your credit count reached 5,846 placing you in the $75.00 monthly 
+    plan.<a>Estimate future costs. </a> 
+</p>
+ <h5>Boxset Pro </h5>
+ <p>
+     The most cost effective plan for large productions,Boxset pro is a one off 
+      payment of $1200.00 allowing you to focus on making.Plus,with priority support,
+      you'll go to the front of the line anytime you have technical questions.<a>Learn more.</a>  
+ </p> --> 

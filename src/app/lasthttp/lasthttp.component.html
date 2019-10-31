@@ -1,0 +1,35 @@
+<p>lasthttp works!</p>
+<p> data {{ show }}</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">id</th>
+        <th scope="col">username</th>
+        <th scope="col">email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of urldata">
+        <td>{{ data.name}}</td>
+        <td>{{ data.id}}</td>
+        <td>{{ data.username}}</td>
+        <td>{{ data.email}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataTwo of giturl">
+        <td>{{ dataTwo.login }}</td>
+        <td>{{ dataTwo.id }}</td>
+        <td>{{ dataTwo.type }}</td>
+      </tr>
+    </tbody>
+  </table>

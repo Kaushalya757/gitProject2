@@ -1,0 +1,106 @@
+<!-- interpolation -->
+<p>{{ Title }}</p>
+<P>{{ Value }}</P>
+
+<!-- Name: <input type="text" [(ngModel)]='name'/>
+<P>Name is {{ name }}}</p> -->
+
+
+<h2> imp {{ serverCeationStatus }}</h2>
+<img src="{{ Img }}">
+<br><br>
+<!-- property data binding -->
+<button tyep="button" [disabled]="ButtonWork">Click here!</button>
+<br><br>
+<!-- event data binding -->
+<button tyep="button" (click)="myDataTitle()">change name</button>
+<br><br>
+<!-- Two way data binding (oprating module.ts) -->
+<input type="text" [(ngModel)]="User" />
+<br><br>
+<p> Enter Name {{ User }}</p>
+
+<input type="text" [(ngModel)]="rollno" />
+<p> Enter roll no. {{ rollno }}</p>
+<br><br>
+<!-- two way -->
+<input type="text" [(ngModel)]="testwork">
+<p> days =>{{ testwork }}</p>
+<br><br>
+
+<div class="container">
+    <label>server name</label>
+    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+    <p> {{ serverName }}</p>
+    <br>
+    <button class="btn btn-danger" [disabled]="!allowNewServer" (click)="onCreateServer()">add server</button>
+</div>
+<br><br>
+
+<!-- <div class="container">
+ <div class="col-6">
+            <p class="pt-3 font-weight-bold">Your data will add automaticly</p>
+            <p class="pt-4"> Name=> {{ formName }} <br></p>
+            <p class="pt-4"> Email=> {{ formEmail }} <br></p>
+        </div>    
+-->
+<!-- event -->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+    <p> {{ serverName }}</p><br> -->
+<!-- two way -->
+<label>server second</label>
+<input type="text" class="form-control container" [(ngModel)]="serverName">
+<!-- <p> {{ serverName }}</p> -->
+<br>
+<button class="btn btn-danger" [disabled]="!allowNewServer" (click)="onCreateServer()">add server</button>
+<p> test -->{{ serverCeationStatus }}</p>
+<!-- </div> -->
+<br><br>
+<br><br>
+<br><br>
+
+<!-- <div class="container">
+    <input type="text" class="form-control mycheck " [(ngModel)]="checkInput">
+    <hr>
+    <p>{{ checkInput }} </p> 
+</div> -->
+
+<label for="">My name</label>
+<input type="text" class="form-control test one" value="noor" (focus)="changeName($event)">
+Hello {{this.userName}}
+<br>
+<br>
+<br>
+<!-- <label for="">My test</label>
+<input type="text" class="form-control" value="testwork" >
+<input type="submit" value="submit">
+<br> -->
+<!-- <p>form data</p>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p class="pt-3 font-weight-bold">Enter your information here</p>
+            <div class="form">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="email" class="form-control" placeholder="Name" >
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" >
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="email" class="form-control" placeholder="Address" >
+                </div>
+                <div class="form-group">
+                    <label for="Email">Pin Code</label>
+                    <input type="email" class="form-control" placeholder="Pin Code" >
+                </div>
+                <div class="form-group">
+                    <label for="Mobile">Mobile</label>
+                    <input type="email" class="form-control" placeholder="Mobile" >
+                </div>
+                <!-- <button class="btn bg-warning text-white" (click)="addFormdata()"> Add form data</button> -->
+

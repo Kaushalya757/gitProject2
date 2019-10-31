@@ -1,0 +1,39 @@
+<p>banding works!</p>
+<h1>{{ userName }}</h1>
+<img src="{{ userImage }}" >
+<p>{{ 'Server' }} ID {{ sererid }}</p>
+
+
+<button type="button" disabled="{{ btnStatus }}">Click</button>
+
+<br>
+<br>
+<br>
+<button type="button" [disabled]="btnStatus">[]</button>
+<br>
+<br>
+<br>
+<a [href]="link">Click google</a>
+<br>
+<br>
+<br>
+<input type="text" [value]="inType" >
+
+<br>
+<br>
+<br><br>
+
+<button type="button" (click)="changeTitle()">Something</button>
+<br>
+<br><br>
+<!-- interpolation -->
+<p> Where is {{ useWord }} {{ head }}</p>
+    <img src= "{{ serName }} ">
+<br>
+<br>
+<!-- property binding -->
+<a [href]="joint" >keshu joint</a><br>
+<button type="button" [disabled]="buttonTitle"> my button</button>
+<br><br>
+<!-- event bindling -->
+<button type="button" (click)="mydata   ()" >event bindinng</button>
