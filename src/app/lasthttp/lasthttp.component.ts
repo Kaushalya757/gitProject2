@@ -11,7 +11,7 @@ show='';
 urldata=[];
 git='';
 giturl=[];
-keshu="just changing data";
+keshu="just changing data ";
   constructor(private _get:HttpService) { }
 
   ngOnInit() {
