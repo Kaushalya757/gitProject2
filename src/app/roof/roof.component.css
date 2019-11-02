@@ -1,0 +1,37 @@
+.first-box .index {
+    background: #4f4949;
+    color: #fff;
+    padding: 0 4px;
+    margin-right: 3px;
+    border-radius: 4px;
+}
+
+.label {
+    z-index: 99999999999999;
+    position: relative;
+}
+
+.diamond {
+    height: 18px;
+    float: right;
+    margin: -1px 0 0 -2px;
+    position: absolute;
+    width: 18px;
+    background-color: #f0ffff;
+    transform: rotate(45deg);
+}
+
+.first-box {
+    background: azure;
+    padding: 4px 6px;
+    margin-right: 25px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: transparent;
+    content: "";
+}
+/* krajbanshi.xyrin@gmail.com 
+keshu123*/

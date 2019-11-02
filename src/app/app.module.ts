@@ -25,6 +25,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { LasthttpComponent } from './lasthttp/lasthttp.component';
 import { KeshuFormComponent } from './keshu-form/keshu-form.component';
 import { CustomerComponent } from './customer/customer.component';
+import { RoofComponent } from './roof/roof.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { CustomerComponent } from './customer/customer.component';
     LasthttpComponent,
     KeshuFormComponent,
     CustomerComponent,
+    RoofComponent,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,
